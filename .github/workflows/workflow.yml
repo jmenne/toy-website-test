@@ -57,9 +57,8 @@ jobs:
     with:
       failOnStdErr: false
       resourceGroupName: ${{ env.AZURE_RESOURCEGROUP_NAME }}
-      template: deploy/main.bicep
-      parameters: >
-        environmentType=${{ env.ENVIRONMENT_TYPE }}
+      template: ./deploy/main.bicep
+      parameters: environmentType=${{ env.ENVIRONMENT_TYPE }}
       additionalArguments: --what-if
 
   deploy:
